@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    appearance: none;
+}
+
+:root {
+    --background-color: #fefefe;
+    --background-color-alt: #dadada;
+    --green_color: #03ac56;
+    --yellow-color: #f1c40f;
+    --blue-color: #3498db;
+    --blue-color-alt: #2980b9;
+    --gray-color: #555;
+    --red-color: #e74c3c;
+    --hover-color: #00000020;
+    --text-color: #282828;
+}
+
+.dark {
+    --background-color: #0a0a0a;
+    --background-color-alt: #dadada;
+    --green_color: #26de81;
+    --yellow-color: #f1c40f;
+    --blue-color: #3498db;
+    --gray-color: #bbb;
+    --hover-color: #ffffff30;
+    --text-color: #fefefe;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-family: "Poppins", sans-serif;
+}
+
+/* reusable clases */
+
+.green_text {
+    color: var(--green_color);
+}
+
+/* TOPBAR */
+
+.topbar {
+    padding: 0 2rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar .brand {
+    transform: translateX(-0%);
+}
+
+.topbar .menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+.topbar ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray-color);
+    font-weight: 900;
+    transition: all 300ms ease;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.topbar ul li:hover {
+    color: var(--green_color);
+    cursor: pointer;
+}
+
+.topbar .theme_toggler {
+    display: flex;
+    outline: none;
+    border: none;
+    padding: 0.4rem;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 300ms ease;
+}
+
+/* THEME TOGGLER */
+
+.sun {
+    display: none;
+    fill: var(--yellow-color);
+}
+
+.moon {
+    display: flex;
+    fill: var(--blue-color);
+}
+
+body.dark .topbar .theme_toggler .sun {
+    display: flex;
+}
+
+body.dark .topbar .theme_toggler .moon {
+    display: none;
+}
+
+.topbar .theme_toggler:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+.topbar .theme_toggler svg.light {
+    fill: var(--yellow-color);
+}
+
+/* HERO */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: calc(100vh - 4rem);
+}
+
+/* HOME TEXT CONTAINER */
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero img {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    transform: translateZ(0);
+    border: 4px solid var(--background-color-alt);
+}
+
+.hero .main_name {
+    text-align: center;
+}
+
+.hero .main_name .hello {
+    font-size: 1.3rem;
+}
+
+.hero .main_name h1 {
+    margin-top: -0.4rem;
+    font-size: 2.7rem;
+}
+
+.hero .description {
+    width: 50vw;
+    text-align: center;
+    font-size: 0.92rem;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.button_group {
+    display: flex;
+    gap: 1rem;
+}
+
+.button_group button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    padding: 0.3rem;
+    margin-top: 1rem;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    gap: 0.6rem;
+    background-color: var(--hover-color);
+    color: var(--text-color);
+    transition: all 300ms ease;
+}
+
+.button_group button:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+.button_group button .linkedin {
+    fill: #0e76a8;
+}
+
+.button_group button .pdf {
+    fill: var(--red-color);
+}
+
+@keyframes ToDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(0.6rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.down_button {
+    position: absolute;
+    bottom: 1.6rem;
+    right: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.7rem;
+    height: 2.7rem;
+    padding: 0.4rem;
+    outline: none;
+    border: 0;
+    border-radius: 50%;
+    transition: all 300ms ease;
+    animation: ToDown 1.5s infinite;
+    background-color: var(--hover-color);
+}
+
+.down_button:hover {
+    cursor: pointer;
+    filter: brightness(0.88);
+}
+
+.down_button svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: var(--gray-color);
+}
