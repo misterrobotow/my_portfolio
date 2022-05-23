@@ -11,21 +11,23 @@
 
 :root {
     --background-color: #fefffe;
-    --background-color-alt: #dadada;
-    --green_color: #03ac56;
+    --background-color-alt: #acacac;
+    --green-color: #03ac56;
+    --green-color-alt: #03964b;
     --yellow-color: #f1c40f;
     --blue-color: #3498db;
     --blue-color-alt: #2980b9;
     --gray-color: #555;
     --red-color: #e74c3c;
     --hover-color: #00000020;
-    --text-color: #282828;
+    --text-color: #171711;
 }
 
 .dark {
     --background-color: #00000a;
-    --background-color-alt: #dadada;
-    --green_color: #26de81;
+    --background-color-alt: #666;
+    --green-color: #26de81;
+    --green-color-alt: #20cd70;
     --yellow-color: #f1c40f;
     --blue-color: #3498db;
     --gray-color: #bbb;
@@ -41,7 +43,41 @@ body {
 /* reusable clases */
 
 .green_text {
-    color: var(--green_color);
+    color: var(--green-color);
+}
+
+.btn {
+    padding: 0.33rem 1.1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    gap: 0.4rem;
+}
+
+.btn svg {
+    transform: scale(0.82);
+}
+
+.primary-btn {
+    background-color: var(--green-color);
+    color: var(--background-color);
+}
+
+.primary-btn svg {
+    fill: var(--background-color);
+}
+
+.secondary-btn {
+    background-color: #ddd;
+    color: #171711;
+}
+
+.primary-btn:hover {
+    background-color: var(--green-color-alt);
+    cursor: pointer;
 }
 
 /* TOPBAR */
@@ -76,7 +112,7 @@ body {
 }
 
 .topbar ul li:hover {
-    color: var(--green_color);
+    color: var(--green-color);
     cursor: pointer;
 }
 
@@ -137,7 +173,7 @@ body.dark .topbar .theme_toggler .moon {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .rounded_img {
@@ -153,7 +189,7 @@ body.dark .topbar .theme_toggler .moon {
 }
 
 .hero .main_name .hello {
-    font-size: 1.3rem;
+    /* font-size: 1.3rem; */
     color: var(--gray-color);
 }
 
@@ -163,16 +199,13 @@ body.dark .topbar .theme_toggler .moon {
 }
 
 .hero .main_name h1 {
-    font-size: 2.7rem;
-    font-weight: 800;
+    font-size: 2.4rem;
+    font-weight: 900;
 }
 
 .hero .description {
     width: 50vw;
     text-align: center;
-    /* line-height: 1.45; */
-    /* font-weight: 400; */
-    /* font-family: "Cousine", monospace; */
 }
 
 .button_group {
@@ -180,11 +213,11 @@ body.dark .topbar .theme_toggler .moon {
     gap: 1rem;
 }
 
-.button_group button {
+.button_group .social-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.3rem 1rem;
+    padding: 0.4rem;
     outline: none;
     border: 0;
     border-radius: 5px;
@@ -196,31 +229,12 @@ body.dark .topbar .theme_toggler .moon {
     transition: all 300ms ease;
 }
 
-.button_group button svg {
+.button_group .social-btn svg {
     fill: var(--text-color);
 }
 
 .button_group button:hover {
     cursor: pointer;
-}
-
-.button_group .linkedin_button {
-    background-color: var(--blue-color-alt);
-    color: white;
-}
-
-.button_group .github_button {
-    background-color: #cccccc;
-    color: #222;
-}
-
-.button_group .github_button svg {
-    fill: #222;
-}
-
-.button_group .cv_button {
-    background-color: var(--red-color);
-    color: white;
 }
 
 @keyframes ToDown {
