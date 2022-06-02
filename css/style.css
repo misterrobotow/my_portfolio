@@ -154,7 +154,7 @@ body {
 
 .topbar ul li {
     display: flex;
-    width: 3rem;
+    width: 4rem;
     justify-content: center;
     align-items: center;
     transition: all 300ms linear;
@@ -179,9 +179,10 @@ body {
     outline: none;
     border: none;
     padding: 0.4rem;
-    border-radius: 100%;
+    border-radius: 100rem;
     background-color: transparent;
     transition: all 300ms ease;
+    border-radius: 100%;
 }
 
 /* THEME TOGGLER */
@@ -213,33 +214,33 @@ body.dark .topbar .theme_toggler .moon {
 }
 
 body .topbar .theme_toggler:hover {
-    background-color: rgba(17, 18, 19, 1);
-    border: 1px solid rgba(17, 18, 19, 1);
-    box-shadow: rgba(30, 31, 32, 0.9) 0px 0px 0px 30px,
+    /* background-color: rgba(17, 18, 19, 1);
+    border: 1px solid rgba(17, 18, 19, 1); */
+    /* box-shadow: rgba(30, 31, 32, 0.9) 0px 0px 0px 30px,
         rgba(50, 51, 52, 0.8) 0px 0px 0px 55px,
         rgba(78, 79, 80, 0.7) 0px 0px 0px 75px,
         rgba(140, 141, 142, 0.6) 0px 0px 0px 93px,
-        rgba(220, 220, 220, 0.5) 0px 0px 0px 109px;
+        rgba(220, 220, 220, 0.5) 0px 0px 0px 109px; */
     cursor: pointer;
 }
 
 body .topbar .theme_toggler:hover .sun {
-    fill: var(--background-color);
+    /* fill: var(--background-color); */
 }
 
 body.dark .topbar .theme_toggler:hover {
-    background-color: #edc531;
-    border: 1px solid #edc531;
-    box-shadow: rgb(219, 180, 44, 0.9) 0px 0px 0px 30px,
+    /* background-color: #edc531;
+    border: 1px solid #edc531; */
+    /* box-shadow: rgb(219, 180, 44, 0.9) 0px 0px 0px 30px,
         rgba(201, 162, 39, 0.8) 0px 0px 0px 55px,
         rgba(182, 145, 33, 0.7) 0px 0px 0px 75px,
         rgba(164, 126, 27, 0.6) 0px 0px 0px 93px,
-        rgba(146, 108, 21, 0.5) 0px 0px 0px 109px;
+        rgba(146, 108, 21, 0.5) 0px 0px 0px 109px; */
     cursor: pointer;
 }
 
 body .topbar .theme_toggler:hover .moon {
-    fill: var(--background-color);
+    /* fill: var(--background-color); */
 }
 
 /* SECTION */
@@ -273,6 +274,11 @@ body .topbar .theme_toggler:hover .moon {
     background-color: var(--hover-color);
 }
 
+.rounded_img img {
+    height: auto;
+    width: auto;
+}
+
 .hero .main_name {
     text-align: center;
 }
@@ -290,6 +296,8 @@ body .topbar .theme_toggler:hover .moon {
 
 .button_group {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -315,11 +323,16 @@ body .topbar .theme_toggler:hover .moon {
 }
 
 .button_group .social-btn svg {
+    transition: all 300ms ease;
     fill: var(--text-color);
 }
 
 .social-btn:hover {
     cursor: pointer;
+}
+
+.social-btn:hover svg {
+    transform: scale(1.2);
 }
 
 @keyframes ToDown {
@@ -333,13 +346,13 @@ body .topbar .theme_toggler:hover .moon {
 
 .down_button {
     position: fixed;
-    bottom: 1.2rem;
-    right: 0.5rem;
+    bottom: 1rem;
+    right: 1rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0.4rem;
-    padding: 0.5rem 1rem;
     outline: none;
     border: 0;
     border-radius: 25px;
@@ -348,6 +361,11 @@ body .topbar .theme_toggler:hover .moon {
     transition: all 300ms ease;
     background-color: transparent;
     animation: ToDown 1s alternate infinite;
+}
+
+.down_button span {
+    writing-mode:vertical-rl;
+    transform: rotate(-180deg);
 }
 
 .down_button:hover {
@@ -397,4 +415,33 @@ body .topbar .theme_toggler:hover .moon {
 
 .about .about_grid p {
     justify-self: start;
+}
+
+/* CONTACT */
+
+.contact .rounded_img {
+    width: 12rem;
+    height: 12rem;
+    min-width: 12rem;
+    min-height: 12rem;
+}
+
+.contact .my-email {
+    font-size: 0.93rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.contact .button_group {
+    margin-top: 1.1rem;
+    gap: 3rem;
+}
+
+.contact .button_group svg {
+    transform: scale(1.1);
+    transition: all 300ms ease;
+}
+
+.contact .button_group .social-btn:hover svg {
+    transform: scale(1.3);
 }
