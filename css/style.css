@@ -18,6 +18,8 @@
     --light-color: #dfdfcf;
     --hover-color: #00000010;
     --text-color: #272727;
+    --card-border-radius: 8px;
+    --button-border-radius: 40px;
 }
 
 .dark {
@@ -31,6 +33,10 @@
     --light-color: #555;
     --hover-color: #ffffff20;
     --text-color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -129,6 +135,14 @@ body {
 
 /* TOPBAR */
 
+header.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
 .topbar {
     position: sticky;
     top: 0;
@@ -169,6 +183,12 @@ body {
 }
 
 .topbar ul li:hover a {
+    cursor: pointer;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.topbar ul li a.active-link {
     cursor: pointer;
     color: var(--text-color);
     font-weight: 600;
@@ -250,7 +270,7 @@ body .topbar .theme_toggler:hover .moon {
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    min-height: calc(100vh - 4rem);
+    min-height: 100vh;
 }
 
 /* HERO */
@@ -268,6 +288,10 @@ body .topbar .theme_toggler:hover .moon {
 .rounded_img {
     height: 16rem;
     width: 16rem;
+    min-height: 16rem;
+    min-width: 16rem;
+    max-height: 16rem;
+    max-width: 16rem;
     border-radius: 100%;
     padding: 0.3rem;
     /* border: 2px solid var(--light-color); */
@@ -279,16 +303,16 @@ body .topbar .theme_toggler:hover .moon {
     width: auto;
 }
 
-.hero .main_name {
+.home .main_name {
     text-align: center;
 }
 
-.hero .main_name .hello {
+.home .main_name .hello {
     font-size: 0.95rem;
     color: var(--gray-color);
 }
 
-.hero .description {
+.home .description {
     width: 30vw;
     text-align: center;
     font-size: 0.94rem;
@@ -344,7 +368,7 @@ body .topbar .theme_toggler:hover .moon {
     }
 }
 
-.down_button {
+.down_tag {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
@@ -358,29 +382,29 @@ body .topbar .theme_toggler:hover .moon {
     border-radius: 25px;
     text-decoration: none;
     color: var(--gray-color);
+    font-size: 0.8rem;
     transition: all 300ms ease;
     background-color: transparent;
     animation: ToDown 1s alternate infinite;
 }
 
-.down_button span {
-    writing-mode:vertical-rl;
+.down_tag span {
+    writing-mode: vertical-rl;
     transform: rotate(-180deg);
 }
 
-.down_button:hover {
-    cursor: pointer;
-    filter: brightness(0.89);
+.down_tag:hover {
+    cursor: default;
 }
 
-.down_button svg {
+.down_tag svg {
     display: flex;
     justify-content: center;
     align-items: center;
     fill: var(--gray-color);
 }
 
-.down_button .down_arrow {
+.down_tag .down_arrow {
     transform: scale(0.8);
 }
 
@@ -415,6 +439,45 @@ body .topbar .theme_toggler:hover .moon {
 
 .about .about_grid p {
     justify-self: start;
+}
+
+/* MY HEROS */
+
+.heros_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.hero_card {
+    display: flex;
+    gap: 0.5rem;
+    width: 30rem;
+    height: fit-content;
+    align-items: center;
+    margin: auto;
+    /* background-color: var(--background-color-alt); */
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+.hero_card .rounded_img {
+    width: 8rem;
+    height: 8rem;
+    min-width: 8rem;
+    min-height: 8rem;
+    max-width: 8rem;
+    max-height: 8rem;
+}
+
+.hero_card .hero_data {
+    padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.hero_card .hero_data p {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
 }
 
 /* CONTACT */
