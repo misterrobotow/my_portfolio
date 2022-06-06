@@ -1,6 +1,7 @@
-let toggleThemeButton = document.getElementById("toggle-theme");
+const toggleThemeButton = document.getElementById("toggle-theme");
 const sections = document.querySelectorAll(".section[id]");
-console.log(sections);
+const down_tag = document.getElementById("down_tag");
+const down_button = document.getElementById("down_button");
 
 if (
     window.matchMedia &&
@@ -12,6 +13,8 @@ if (
 toggleThemeButton.addEventListener("click", (event) => {
     document.body.classList.toggle("dark");
 });
+
+// Scroll active section
 
 function scrollActive() {
     const scrollY = window.pageYOffset;
@@ -33,3 +36,16 @@ function scrollActive() {
     });
 }
 window.addEventListener("scroll", scrollActive);
+
+// On scroll events
+
+function scrollDownTag() {
+    if (this.scrollY >= 500) {
+        down_tag.classList.add("d-none");
+        down_button.classList.remove("d-none");
+    } else {
+        down_tag.classList.remove("d-none");
+        down_button.classList.add("d-none");
+    }
+}
+window.addEventListener("scroll", scrollDownTag);

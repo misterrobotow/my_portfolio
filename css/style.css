@@ -9,7 +9,7 @@
 
 :root {
     --background-color: #fafbfc;
-    --background-color-alt: #e0e0e0;
+    --background-color-alt: #e8e8e8;
     --blue-color: #577590;
     --blue-color-alt: #688baa;
     --golden-color: #e9c46a;
@@ -131,6 +131,191 @@ body {
 
 .text-center {
     text-align: center;
+}
+
+.d-none {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.badge_row {
+    margin-top: 0.3rem;
+    display: flex;
+    gap: 0.3rem;
+}
+
+.badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 0.6rem;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: 450;
+}
+
+.badge svg {
+    transform: scale(0.7);
+}
+
+.separator {
+    border-bottom: 1px solid var(--hover-color);
+    margin: 0.5rem 0 1rem 0;
+}
+
+/* Technologies */
+
+.html {
+    background-color: #e2711d;
+    color: white;
+}
+
+.css {
+    background-color: #2176ff;
+    color: white;
+}
+
+.js {
+    background-color: #fcca46;
+    color: #222;
+}
+
+.php {
+    background-color: #3d405b;
+    color: white;
+}
+
+.mysql {
+    background-color: #eeeeee;
+    color: var(--blue-color);
+    border: 1px solid #e8e8e8;
+}
+
+.sql {
+    color: #e2711d;
+}
+
+.jquery {
+    background-color: #3d5a80;
+    color: white;
+}
+
+.bootstrap {
+    background-color: #6a4c93;
+    color: white;
+}
+
+.react {
+    background-color: #42c2ff;
+    color: white;
+}
+
+.node {
+    background-color: #3f7d20;
+    color: white;
+}
+
+.linux {
+    background-color: #111;
+    border: 1px solid var(--hover-color);
+    color: white;
+}
+
+.postgres {
+    background-color: #1a659e;
+    color: #eee;
+    font-weight: 500 !important;
+}
+
+.postgres .sql {
+    font-weight: 600 !important;
+    color: white;
+}
+
+.firebase {
+    background-color: #ffc300;
+    color: white;
+}
+
+.maria {
+    background-color: #b58463;
+    color: white;
+}
+
+.mongo {
+    background-color: #007f5f;
+    color: white;
+}
+
+.vscode {
+    background-color: #eeeeee;
+    border: 1px solid #e8e8e8;
+    color: #2176ff;
+}
+
+.git {
+    background-color: #f2542d;
+    color: white;
+}
+
+.github {
+    background-color: #222;
+    color: white;
+}
+
+.gitlab {
+    background-color: #f76e11;
+    color: white;
+}
+
+.sequelize {
+    background-color: #0d1b2a;
+    color: #eee;
+}
+
+.express {
+    background-color: #777;
+    color: #eee;
+}
+
+.redux {
+    background-color: #7b2cbf;
+    color: white;
+}
+
+.next {
+    background-color: #e8e8e8;
+    color: black;
+}
+
+.styledcomponents {
+    background-color: #f1bf98;
+    color: #111;
+}
+
+.sass {
+    background-color: #d96098;
+    color: white;
+}
+
+.npm {
+    background-color: #d62828;
+    color: white;
+}
+
+.yarn {
+    background-color: #1a6d92;
+    color: white;
+}
+
+.pnpm {
+    background-color: #ff9f1c;
+    color: #222;
+}
+
+.composer {
+    background-color: #ddd;
+    color: #411d13;
 }
 
 /* TOPBAR */
@@ -359,6 +544,215 @@ body .topbar .theme_toggler:hover .moon {
     transform: scale(1.2);
 }
 
+/* ABOUT */
+
+.about .about_grid {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 20vw 40vw;
+    gap: 3rem;
+}
+
+.about .about_grid .side-image {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    height: 20rem;
+    width: 20rem;
+    background-color: var(--hover-color);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.about .about_grid .side-image img {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    outline: none;
+}
+
+.about .about_grid p {
+    justify-self: start;
+    font-size: 0.93rem;
+}
+
+/* Skills */
+
+.skills_grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 0.3rem;
+}
+
+.skills_grid .badge_row {
+    gap: 0.5rem;
+}
+
+.skills_grid .row1 .badge {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.skills_grid .row2 .badge {
+    padding: 0.4rem 1.1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.skills_grid .row3 .badge {
+    padding: 0.35rem 1.1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.skills_grid .row4 .badge {
+    padding: 0.3rem 1.1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.skills_grid .row5 .badge {
+    padding: 0.2rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* PROJECTS */
+
+.projects_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5.5rem;
+    margin-top: 2rem;
+}
+
+.project_card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 28rem;
+    height: fit-content;
+    margin: auto;
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    background-color: var(--background-color-alt);
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.project_card .project_images {
+    width: auto;
+    height: fit-content;
+    max-height: 15rem;
+    background-color: var(--hover-color);
+    overflow: hidden;
+}
+
+.project_card .project_images img {
+    width: 100%;
+    height: auto;
+}
+
+.project_card .project_data {
+    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.project_card .project_data h3 {
+    font-size: 1.3rem;
+    font-weight: 550;
+}
+
+.project_card .project_data p {
+    font-size: 0.88rem;
+    margin-top: 1rem;
+}
+/* MY HEROS */
+
+.heros_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.hero_card {
+    display: flex;
+    gap: 0.5rem;
+    width: 30.5rem;
+    height: fit-content;
+    align-items: center;
+    margin: auto;
+    /* background-color: var(--background-color-alt); */
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+.hero_card .rounded_img {
+    width: 7rem;
+    height: 7rem;
+    min-width: 7rem;
+    min-height: 7rem;
+    max-width: 7rem;
+    max-height: 7rem;
+}
+
+.hero_card .hero_data {
+    padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.hero_card .hero_data a {
+    text-decoration: none;
+}
+
+.hero_card .hero_data a small {
+    transition: all 300ms ease;
+    color: var(--blue-color);
+}
+
+.hero_card .hero_data a:hover small {
+    color: var(--blue-color-alt);
+}
+
+.hero_card .hero_data p {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+/* CONTACT */
+
+.contact .rounded_img {
+    width: 12rem;
+    height: 12rem;
+    min-width: 12rem;
+    min-height: 12rem;
+}
+
+.contact .my-email {
+    font-size: 0.93rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.contact .button_group {
+    margin-top: 1.1rem;
+    gap: 3rem;
+}
+
+.contact .button_group svg {
+    transform: scale(1.1);
+    transition: all 300ms ease;
+}
+
+.contact .button_group .social-btn:hover svg {
+    transform: scale(1.3);
+}
+
+/* Down tag */
 @keyframes ToDown {
     0% {
         transform: translateY(-0.1rem);
@@ -408,103 +802,41 @@ body .topbar .theme_toggler:hover .moon {
     transform: scale(0.8);
 }
 
-/* ABOUT */
+/* Down button */
 
-.about .about_grid {
-    display: grid;
-    align-items: center;
+.down_button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
     justify-content: center;
-    grid-template-columns: 20vw 40vw;
-    gap: 3rem;
-}
-
-.about .about_grid .side-image {
-    justify-self: end;
-    display: flex;
     align-items: center;
-    height: 20rem;
-    width: 20rem;
-    background-color: var(--hover-color);
-    border-radius: 2rem;
-    overflow: hidden;
-}
-
-.about .about_grid .side-image img {
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    appearance: none;
+    gap: 0.4rem;
     outline: none;
+    padding: 0.45rem;
+    border: 0;
+    border-radius: 25px;
+    text-decoration: none;
+    color: var(--gray-color);
+    font-size: 0.8rem;
+    transition: all 300ms ease;
+    background-color: var(--background-color-alt);
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
-.about .about_grid p {
-    justify-self: start;
+.down_button:hover {
+    cursor: pointer;
 }
 
-/* MY HEROS */
-
-.heros_grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    margin-top: 2rem;
-}
-
-.hero_card {
+.down_button svg {
     display: flex;
-    gap: 0.5rem;
-    width: 30rem;
-    height: fit-content;
+    justify-content: center;
     align-items: center;
-    margin: auto;
-    /* background-color: var(--background-color-alt); */
-    border-radius: var(--card-border-radius);
-    overflow: hidden;
-}
-
-.hero_card .rounded_img {
-    width: 8rem;
-    height: 8rem;
-    min-width: 8rem;
-    min-height: 8rem;
-    max-width: 8rem;
-    max-height: 8rem;
-}
-
-.hero_card .hero_data {
-    padding: 0.5rem 0.5rem 0.5rem 0;
-}
-
-.hero_card .hero_data p {
-    font-size: 0.85rem;
-    margin-top: 0.5rem;
-}
-
-/* CONTACT */
-
-.contact .rounded_img {
-    width: 12rem;
-    height: 12rem;
-    min-width: 12rem;
-    min-height: 12rem;
-}
-
-.contact .my-email {
-    font-size: 0.93rem;
-    color: var(--text-color);
-    font-weight: 600;
-}
-
-.contact .button_group {
-    margin-top: 1.1rem;
-    gap: 3rem;
-}
-
-.contact .button_group svg {
-    transform: scale(1.1);
+    fill: var(--gray-color);
+    transform: scale(0.9);
     transition: all 300ms ease;
 }
 
-.contact .button_group .social-btn:hover svg {
-    transform: scale(1.3);
+.down_button:hover svg {
+    fill: var(--text-color);
 }
