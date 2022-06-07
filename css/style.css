@@ -233,7 +233,7 @@ body {
 }
 
 .firebase {
-    background-color: #ffc300;
+    background-color: #f3a916;
     color: white;
 }
 
@@ -269,7 +269,7 @@ body {
 }
 
 .sequelize {
-    background-color: #0d1b2a;
+    background-color: #001d3d;
     color: #eee;
 }
 
@@ -309,13 +309,13 @@ body {
 }
 
 .pnpm {
-    background-color: #ff9f1c;
+    background-color: #fb8b24;
     color: #222;
 }
 
 .composer {
     background-color: #ddd;
-    color: #411d13;
+    color: #813405;
 }
 
 /* TOPBAR */
