@@ -419,33 +419,8 @@ body.dark .topbar .theme_toggler .moon {
 }
 
 body .topbar .theme_toggler:hover {
-    /* background-color: rgba(17, 18, 19, 1);
-    border: 1px solid rgba(17, 18, 19, 1); */
-    /* box-shadow: rgba(30, 31, 32, 0.9) 0px 0px 0px 30px,
-        rgba(50, 51, 52, 0.8) 0px 0px 0px 55px,
-        rgba(78, 79, 80, 0.7) 0px 0px 0px 75px,
-        rgba(140, 141, 142, 0.6) 0px 0px 0px 93px,
-        rgba(220, 220, 220, 0.5) 0px 0px 0px 109px; */
     cursor: pointer;
-}
-
-body .topbar .theme_toggler:hover .sun {
-    /* fill: var(--background-color); */
-}
-
-body.dark .topbar .theme_toggler:hover {
-    /* background-color: #edc531;
-    border: 1px solid #edc531; */
-    /* box-shadow: rgb(219, 180, 44, 0.9) 0px 0px 0px 30px,
-        rgba(201, 162, 39, 0.8) 0px 0px 0px 55px,
-        rgba(182, 145, 33, 0.7) 0px 0px 0px 75px,
-        rgba(164, 126, 27, 0.6) 0px 0px 0px 93px,
-        rgba(146, 108, 21, 0.5) 0px 0px 0px 109px; */
-    cursor: pointer;
-}
-
-body .topbar .theme_toggler:hover .moon {
-    /* fill: var(--background-color); */
+    background-color: var(--hover-color);
 }
 
 /* SECTION */
@@ -589,8 +564,29 @@ body .topbar .theme_toggler:hover .moon {
     gap: 0.3rem;
 }
 
-.skills_grid .badge_row {
-    gap: 0.5rem;
+.skills_grid .row1 {
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+.skills_grid .row2 {
+    gap: 0.85rem;
+    margin: 0.3rem 0;
+}
+
+.skills_grid .row3 {
+    gap: 0.8rem;
+    margin: 0.2rem 0;
+}
+
+.skills_grid .row4 {
+    gap: 0.75rem;
+    margin: 0.2rem 0;
+}
+
+.skills_grid .row5 {
+    gap: 0.7rem;
+    /* margin: 0.1rem 0; */
 }
 
 .skills_grid .row1 .badge {
@@ -621,6 +617,19 @@ body .topbar .theme_toggler:hover .moon {
     padding: 0.2rem 1rem;
     font-size: 0.9rem;
     font-weight: 600;
+}
+
+/* badge animations */
+
+.skills_grid .badge_row .badge {
+    transition: all 300ms ease;
+    transform: translateY(-10px);
+    opacity: 0;
+}
+
+.skills_grid .badge_row .badge.animate {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* PROJECTS */
