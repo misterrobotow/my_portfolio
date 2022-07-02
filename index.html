@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="icon" type="image/x-icon" href="img/D-light.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Style -->
         <link rel="stylesheet" href="css/style.css" />
@@ -16,9 +17,12 @@
     <body>
         <header class="navbar">
             <nav class="topbar">
-                <h4 class="brand">Daniel Gómez</h4>
+                <h1 class="brand">
+                    <img src="img/D-dark.png" alt="" />
+                    Daniel Gómez
+                </h1>
                 <ul class="menu">
-                    <li><a href="#home">Home</a></li>
+                    <li><a class="active-link" href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -104,7 +108,7 @@
                         </div>
                     </a>
                     <a class="btn blue-btn">
-                        <svg
+                        <!-- <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
                             height="24"
@@ -113,8 +117,8 @@
                             <path
                                 d="M20 18H4v-7H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-2v7z"
                             ></path>
-                        </svg>
-                        Get CV
+                        </svg> -->
+                        Download CV
                     </a>
                 </div>
             </div>
@@ -122,7 +126,7 @@
         <section class="section about" id="about">
             <div class="text-center">
                 <h1>About me</h1>
-                <small class="text-muted">My introduction</small>
+                <small class="text-muted">Who I am?</small>
             </div>
             <div class="about_grid">
                 <div class="side-image">
@@ -148,7 +152,12 @@
             </div>
         </section>
         <section class="section" id="skills">
-            <h1>My skills</h1>
+            <div class="text-center">
+                <h1>My skills</h1>
+                <small class="text-muted"
+                    >Technologies I usually work with</small
+                >
+            </div>
             <div class="skills_grid">
                 <div class="badge_row row4">
                     <div class="badge sequelize">Sequelize</div>
@@ -382,11 +391,26 @@
         <section class="section contact" id="contact">
             <div class="text-center">
                 <h1>Contact me</h1>
-                <small class="text-muted"></small>
+                <small class="text-muted"
+                    >Are you interested we work together?</small
+                >
             </div>
             <div class="rounded_img">
-                <img src="" alt="" onerror="this.remove()" />
+                <img src="img/email.png" alt="" onerror="this.remove()" />
             </div>
+            <a class="btn blue-btn">
+                <!-- <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                >
+                    <path d="m12 16 4-5h-3V4h-2v7H8z"></path>
+                    <path
+                        d="M20 18H4v-7H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-2v7z"
+                    ></path>
+                </svg> -->
+                Download CV
+            </a>
             <div class="text-center">
                 <small class="text-muted">My email</small>
                 <p class="my-email">misterrobotow@gmail.com</p>

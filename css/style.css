@@ -11,7 +11,7 @@
     --background-color: #fafbfc;
     --background-color-alt: #e8e8e8;
     --blue-color: #577590;
-    --blue-color-alt: #688baa;
+    --blue-color-alt: #395168;
     --golden-color: #e9c46a;
     --white-color: #fff;
     --gray-color: #666;
@@ -26,7 +26,7 @@
     --background-color: #111213;
     --background-color-alt: #292929;
     --primary-color: #577590;
-    --blue-color-alt: #688baa;
+    --blue-color-alt: #7da3c5;
     --golden-color: #e9c46a;
     --white-color: #fff;
     --gray-color: #bbb;
@@ -43,6 +43,11 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     transition: background-color 300ms ease;
+}
+
+h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
 }
 
 /* reusable clases */
@@ -79,7 +84,7 @@ body {
 
 .btn {
     position: relative;
-    padding: 0.33rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -345,6 +350,19 @@ header.navbar {
     border-bottom: 1px solid var(--hover-color);
 }
 
+.topbar .brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.topbar .brand img {
+    height: 2.2rem;
+    width: auto;
+}
+
 .topbar .menu {
     display: flex;
     gap: 2rem;
@@ -352,14 +370,16 @@ header.navbar {
 }
 
 .topbar ul li {
-    display: flex;
     width: 4rem;
-    justify-content: center;
-    align-items: center;
     transition: all 300ms linear;
 }
 
 .topbar ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     color: var(--gray-color);
     font-size: 0.83rem;
@@ -367,8 +387,11 @@ header.navbar {
     transition: all 300ms linear;
 }
 
-.topbar ul li:hover a {
+.topbar ul li:hover {
     cursor: pointer;
+}
+
+.topbar ul li:hover a {
     color: var(--text-color);
     font-weight: 600;
 }
@@ -459,8 +482,8 @@ body .topbar .theme_toggler:hover {
 }
 
 .rounded_img img {
-    height: auto;
-    width: auto;
+    height: 100%;
+    width: 100%;
 }
 
 .home .main_name {
@@ -509,6 +532,7 @@ body .topbar .theme_toggler:hover {
 .button_group .social-btn svg {
     transition: all 300ms ease;
     fill: var(--text-color);
+    transform: scale(1.1);
 }
 
 .social-btn:hover {
@@ -516,7 +540,7 @@ body .topbar .theme_toggler:hover {
 }
 
 .social-btn:hover svg {
-    transform: scale(1.2);
+    transform: scale(1.3);
 }
 
 /* ABOUT */
@@ -590,31 +614,31 @@ body .topbar .theme_toggler:hover {
 }
 
 .skills_grid .row1 .badge {
-    padding: 0.5rem 1.5rem;
+    padding: 0.8rem 1.8rem;
     font-size: 1.5rem;
     font-weight: 600;
 }
 
 .skills_grid .row2 .badge {
-    padding: 0.4rem 1.1rem;
+    padding: 0.7rem 1.3rem;
     font-size: 1.2rem;
     font-weight: 600;
 }
 
 .skills_grid .row3 .badge {
-    padding: 0.35rem 1.1rem;
+    padding: 0.6rem 1.25rem;
     font-size: 1.1rem;
     font-weight: 600;
 }
 
 .skills_grid .row4 .badge {
-    padding: 0.3rem 1.1rem;
+    padding: 0.5rem 1.2rem;
     font-size: 0.9rem;
     font-weight: 600;
 }
 
 .skills_grid .row5 .badge {
-    padding: 0.2rem 1rem;
+    padding: 0.5rem 1rem;
     font-size: 0.9rem;
     font-weight: 600;
 }
@@ -680,6 +704,7 @@ body .topbar .theme_toggler:hover {
     font-size: 0.88rem;
     margin-top: 1rem;
 }
+
 /* MY HEROS */
 
 .heros_grid {
@@ -720,11 +745,12 @@ body .topbar .theme_toggler:hover {
 
 .hero_card .hero_data a small {
     transition: all 300ms ease;
-    color: var(--blue-color);
+    color: var(--blue-color-alt);
 }
 
 .hero_card .hero_data a:hover small {
     color: var(--blue-color-alt);
+    text-decoration: underline;
 }
 
 .hero_card .hero_data p {
@@ -734,11 +760,25 @@ body .topbar .theme_toggler:hover {
 
 /* CONTACT */
 
+@keyframes fly {
+    0% {
+        transform: translateY(-0.5rem);
+    }
+
+    100% {
+        transform: translateY(0.5rem);
+    }
+}
+
 .contact .rounded_img {
-    width: 12rem;
-    height: 12rem;
-    min-width: 12rem;
-    min-height: 12rem;
+    width: 6rem;
+    height: 6rem;
+    min-width: 6rem;
+    min-height: 6rem;
+    margin: 1.5rem 0;
+    background-color: transparent;
+    filter: grayscale(0.4) brightness(1.1);
+    animation: fly 2s alternate infinite;
 }
 
 .contact .my-email {
@@ -764,10 +804,10 @@ body .topbar .theme_toggler:hover {
 /* Down tag */
 @keyframes ToDown {
     0% {
-        transform: translateY(-0.1rem);
+        transform: translateY(-0.2rem);
     }
     100% {
-        transform: translateY(0.1rem);
+        transform: translateY(0.2rem);
     }
 }
 
