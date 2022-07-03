@@ -25,7 +25,7 @@
 .dark {
     --background-color: #111213;
     --background-color-alt: #292929;
-    --primary-color: #577590;
+    --blue-color: #577590;
     --blue-color-alt: #7da3c5;
     --golden-color: #e9c46a;
     --white-color: #fff;
@@ -325,16 +325,9 @@ h1 {
 
 /* TOPBAR */
 
-header.navbar {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-}
-
 .topbar {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     padding: 0 2rem;
     height: 4rem;
@@ -344,10 +337,6 @@ header.navbar {
     align-items: center;
     background-color: var(--background-color);
     transition: background-color 300ms ease;
-}
-
-.topbar-border {
-    border-bottom: 1px solid var(--hover-color);
 }
 
 .topbar .brand {
@@ -477,7 +466,6 @@ body .topbar .theme_toggler:hover {
     max-width: 16rem;
     border-radius: 100%;
     padding: 0.3rem;
-    /* border: 2px solid var(--light-color); */
     background-color: var(--hover-color);
 }
 
